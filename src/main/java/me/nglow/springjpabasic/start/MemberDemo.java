@@ -1,13 +1,9 @@
-package me.nglow.springjpabasic;
+package me.nglow.springjpabasic.start;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-@Entity
-@Table(name = "member")
-public class Member {
+//@Entity
+public class MemberDemo {
 
     @Id
     @Column(name = "member_id")

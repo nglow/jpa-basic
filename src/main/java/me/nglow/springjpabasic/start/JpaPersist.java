@@ -1,6 +1,5 @@
-package me.nglow.springjpabasic;
+package me.nglow.springjpabasic.start;
 
-import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 public class JpaPersist {
@@ -12,10 +11,10 @@ public class JpaPersist {
 
         transaction.begin();
         try {
-            Member member = new Member();
-            member.setId(4L);
-            member.setName("memberD");
-            entityManager.persist(member);
+            MemberDemo memberDemo = new MemberDemo();
+            memberDemo.setId(1L);
+            memberDemo.setName("memberA");
+            entityManager.persist(memberDemo);
 
             transaction.commit();
         } catch (Exception e) {

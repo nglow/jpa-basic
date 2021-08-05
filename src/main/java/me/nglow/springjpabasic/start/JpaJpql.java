@@ -1,11 +1,8 @@
-package me.nglow.springjpabasic;
+package me.nglow.springjpabasic.start;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-public class JpaFind {
+public class JpaJpql {
 
     public static void main(String[] args) {
         var entityManagerFactory = Persistence.createEntityManagerFactory("hello");
@@ -14,9 +11,11 @@ public class JpaFind {
 
         transaction.begin();
         try {
-            var member = entityManager.find(Member.class, 1L);
-            member.setName("ChangedName");
-
+            var members = entityManager.createQuery("select m from MemberDemo m", MemberDemo.class)
+                    .getResultList();
+            for (MemberDemo memberDemo : members) {
+                System.out.println(memberDemo.toString());
+            }
             transaction.commit();
         } catch (Exception e) {
             transaction.rollback();

@@ -1,9 +1,10 @@
 package me.nglow.springjpabasic;
 
-import javax.persistence.Persistence;
-import javax.persistence.TypedQuery;
+import me.nglow.springjpabasic.start.MemberDemo;
 
-public class JpaJpql {
+import javax.persistence.Persistence;
+
+public class JpaMain {
 
     public static void main(String[] args) {
         var entityManagerFactory = Persistence.createEntityManagerFactory("hello");
@@ -12,11 +13,7 @@ public class JpaJpql {
 
         transaction.begin();
         try {
-            var members = entityManager.createQuery("select m from Member m", Member.class)
-                    .getResultList();
-            for (Member member : members) {
-                System.out.println(member.toString());
-            }
+
             transaction.commit();
         } catch (Exception e) {
             transaction.rollback();

@@ -1,4 +1,4 @@
-package me.nglow.springjpabasic;
+package me.nglow.springjpabasic.start;
 
 import javax.persistence.Persistence;
 
@@ -11,7 +11,7 @@ public class JpaUpdate {
 
         transaction.begin();
         try {
-            var member = entityManager.find(Member.class, 1L);
+            var member = entityManager.find(MemberDemo.class, 1L);
             System.out.println("Member.id = " + member.getId());
             System.out.println("Member.name = " + member.getName());
 

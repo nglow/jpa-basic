@@ -1,6 +1,28 @@
+##spring:
+##  datasource:
+##    driver-class-name: com.mysql.cj.jdbc.Driver
+##    url: jdbc:mysql://localhost:3306/jpa?serverTimezone=UTC&characterEncoding=UTF-8
+##    username: root
+##    password: root123
+#
 #spring:
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: create  # create or update
+#    properties:
+#      hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
+#
+#primary:
 #  datasource:
 #    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://localhost:3306/jpa?serverTimezone=UTC&characterEncoding=UTF-8
+#    url: jdbc:mysql://localhost:3306/jpa_shop?serverTimezone=UTC&characterEncoding=UTF-8
+#    username: root
+#    password: root123
+#
+#secondary:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3307/jpa?serverTimezone=UTC&characterEncoding=UTF-8
 #    username: root
 #    password: root123
