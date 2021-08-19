@@ -9,6 +9,9 @@
         <class>me.nglow.springjpabasic.domain.OrderItem</class>
         <class>me.nglow.springjpabasic.domain.Delivery</class>
         <class>me.nglow.springjpabasic.domain.Category</class>
+        <class>me.nglow.springjpabasic.domain.Book</class>
+        <class>me.nglow.springjpabasic.domain.Movie</class>
+        <class>me.nglow.springjpabasic.domain.Album</class>
         <properties>
             <!-- 필수 속성 -->
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
